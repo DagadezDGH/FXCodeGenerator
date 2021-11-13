@@ -31,7 +31,7 @@
       <CheckBox fx:id="checkBoxLectura" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <ComboBox fx:id="comboBoxTipo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <ComboBox fx:id="comboBoxGenerico" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Button fx:id="volverButton" defaultButton="true" mnemonicParsing="false" text="Volver" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+      <Button fx:id="volverButton" defaultButton="true" mnemonicParsing="false" onAction="#onVolverAction" text="Volver" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
