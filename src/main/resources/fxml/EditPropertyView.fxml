@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<GridPane hgap="5.0" prefHeight="200.0" prefWidth="320.0" vgap="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
+<GridPane fx:id="editPropertyView" hgap="5.0" prefHeight="200.0" prefWidth="320.0" vgap="5.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
       <ColumnConstraints minWidth="-Infinity" />
       <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
@@ -28,11 +27,11 @@
       <Label text="Sólo lectura:" GridPane.rowIndex="1" />
       <Label text="Tipo:" GridPane.rowIndex="2" />
       <Label text="Genérico:" GridPane.rowIndex="3" />
-      <TextField GridPane.columnIndex="1" />
-      <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Button defaultButton="true" mnemonicParsing="false" text="Volver" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+      <TextField fx:id="nombrePropertyText" GridPane.columnIndex="1" />
+      <CheckBox fx:id="checkBoxLectura" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ComboBox fx:id="comboBoxTipo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <ComboBox fx:id="comboBoxGenerico" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="volverButton" defaultButton="true" mnemonicParsing="false" text="Volver" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

@@ -137,16 +137,36 @@ public class BeanController implements Initializable {
 	@FXML
 	void onEditarPropiedadAction(ActionEvent event) {
 		// TODO editar la propiedad seleccionada
+		Property seleccion = propiedadesList.getSelectionModel().getSelectedItem();
+		EditBeanController controller = new EditBeanController();
+		controller.bind(seleccion, beans);
+		controller.showOnStage(FXCodeGenApp.getPrimaryStage());
 	}
 
 	@FXML
 	void onEliminarPropiedadAction(ActionEvent event) {
 		// TODO eliminar la propiedad seleccionada
+		
+		Property seleccion = propiedadesList.getSelectionModel().getSelectedItem();
+		if (FXCodeGenApp.confirm("Eliminar propiedad",
+								 "Se va a eliminar la propiedad '"
+						         + seleccion.getName() + "'.", 
+								 "¿Está seguro?")) {
+			
+			getBean().getProperties().remove(seleccion);
+			
+		}
 	}
 
 	@FXML
 	void onNuevaPropiedadAction(ActionEvent event) {
 		// TODO añadir una nueva propiedad
+		Property property = new Property();
+		property.setName("nuevaPropiedad");
+		property.setType(Type.STRING);
+		properties.add(property);
+		propiedadesList.getSelectionModel().select(property);
+		onEditarPropiedadAction(event);
 	}
 
 	@FXML
